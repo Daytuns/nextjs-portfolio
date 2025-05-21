@@ -7,13 +7,15 @@ import About from './About'
 import Footer from './Footer'
 import Skills from './Skills'
 import LastPlayed from './LastPlayed' 
+import SelectedWork from './SelectedWork'
 
 const Home = () => {
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <Nav />
       <Intro />
-      <Projects />
+      {/* <Projects /> */}
+      <SelectedWork />
       <Skills />
       <About />
       <LastPlayed /> 

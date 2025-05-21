@@ -7,6 +7,7 @@ const skills = [
   // { name: 'VueJS', icon: 'https://cdn.simpleicons.org/vuedotjs' },
   { name: 'NextJS', icon: 'https://cdn.simpleicons.org/nextdotjs/white' },
   { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss' },
+  { name: 'Shadcn', icon: 'https://cdn.simpleicons.org/shadcnui/white' },
   { name: 'Framer Motion', icon: 'https://cdn.simpleicons.org/framer' },
   { name: 'GSAP', icon: 'https://cdn.simpleicons.org/greensock' },
   { name: 'NodeJS', icon: 'https://cdn.simpleicons.org/nodedotjs/darkgreen' },
