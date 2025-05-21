@@ -7,6 +7,7 @@ export default function ProjectCard({ title, href, imageSrc, description }) {
       <div className="flex flex-col w-full">
         <Link
           href={href}
+          target="_blank"
           draggable={false}
           className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[380px] lg:rounded-3xl lg:p-2"
         >
