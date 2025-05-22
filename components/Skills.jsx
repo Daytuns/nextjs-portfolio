@@ -2,7 +2,7 @@ const skills = [
   { name: 'HTML', icon: 'https://cdn.simpleicons.org/html5' },
   { name: 'CSS', icon: 'https://cdn.simpleicons.org/css3' },
   { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript' },
-//   { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript' },
+  { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript' },
   { name: 'ReactJS', icon: 'https://cdn.simpleicons.org/react' },
   // { name: 'VueJS', icon: 'https://cdn.simpleicons.org/vuedotjs' },
   { name: 'NextJS', icon: 'https://cdn.simpleicons.org/nextdotjs/white' },
@@ -26,7 +26,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="mt-16">
+    <div className="mt-30">
         <p>My Tech Stack</p>
         <div className="mx-auto mt-6 flex max-w-4xl flex-wrap gap-2 text-lg text-gray-800 lg:gap-4">
         {skills.map((skill) => (

@@ -1,7 +1,15 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link"
+import Image from "next/image"
 
-export default function ProjectCard({ title, href, imageSrc, description }) {
+export default function ProjectCard({
+  title,
+  href,
+  imageSrc,
+  description,
+  gradient,     // <-- new prop
+  imageShadow,  // <-- new prop
+  accentColor = 'text-emerald-300' // default fallback
+}) {
   return (
     <div className="project-card flex w-full flex-row mt-8">
       <div className="flex flex-col w-full">
@@ -21,15 +29,9 @@ export default function ProjectCard({ title, href, imageSrc, description }) {
           />
 
           {/* Main content container */}
-          <div className="group relative flex size-full flex-col justify-between items-center overflow-hidden rounded-xl bg-gradient-to-b from-black/40 to-transparent transition-all duration-300 lg:rounded-2xl">
+          <div className="group relative flex size-full flex-col justify-between items-center overflow-hidden rounded-xl transition-all duration-300 lg:rounded-2xl">
             {/* Background gradient */}
-            <div
-              className="absolute inset-0 -z-1"
-              style={{
-                background:
-                  'linear-gradient(188.62deg, rgb(8, 57, 38) 49.9%, rgb(5, 150, 105) 81.7%, rgb(52, 211, 153) 93.88%, rgb(249, 215, 147) 113.5%)',
-              }}
-            />
+            <div className="absolute inset-0 -z-1" style={{ background: gradient }} />
 
             {/* Mid glow accent */}
             <div
@@ -41,7 +43,7 @@ export default function ProjectCard({ title, href, imageSrc, description }) {
             />
 
             {/* Text content */}
-            <div className="hidden w-full flex-row items-center justify-between px-10 pt-8 text-emerald-300 lg:flex">
+            <div className={`w-full flex-row items-center justify-between px-10 pt-8 ${accentColor} lg:flex`}>
               <h3 className="max-w-[90%] text-xl">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +69,7 @@ export default function ProjectCard({ title, href, imageSrc, description }) {
               width={1203}
               height={753}
               loading="lazy"
-              className="relative bottom-0.5 w-full max-w-[90%] translate-y-4 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform shadow-[0_0_30px_#059669] lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3"
+              className={`relative bottom-0.5 w-full max-w-[90%] lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3`}
               style={{ color: 'transparent' }}
             />
           </div>

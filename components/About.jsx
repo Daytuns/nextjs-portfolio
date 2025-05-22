@@ -3,7 +3,7 @@ import Chihuahua from './ChihuahuaPopover'
 
 const About = () => {
   return (
-    <div className='mt-16 mb-5'>
+    <div className='mt-30 mb-5'>
         <p>About Me</p>
         <p className='mt-5 text-[#777a81]'>
             <span className='font-bold text-white'>Curiosity.&nbsp; Persistence.&nbsp; Adaptability.<br /><br /></span>
