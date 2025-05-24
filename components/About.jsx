@@ -4,8 +4,8 @@ import Chihuahua from './ChihuahuaPopover'
 const About = () => {
   return (
     <div className='mt-30 mb-5'>
-        <p>About Me</p>
-        <p className='mt-5 text-[#777a81]'>
+        <p className='text-xl'>About me.</p>
+        <p className='mt-10 text-[#777a81]'>
             <span className='font-bold text-white'>Curiosity.&nbsp; Persistence.&nbsp; Adaptability.<br /><br /></span>
             These three words drive how I approach life, learning, and problem-solving. <br /> <br />
             I graduated from <span className='text-gray-300'>John Brown University</span> in Siloam Springs, Arkansas, where I earned a Bachelor of Science in <span className='text-gray-300'>Electrical Engineering</span> with a minor in <span className='text-gray-300'>Computer Science</span>. During this time I had the opportunity to learn across disciplines, from embedded systems to creative design. <br /><br />

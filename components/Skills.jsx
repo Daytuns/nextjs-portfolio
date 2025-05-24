@@ -19,7 +19,8 @@ const skills = [
   { name: 'Github', icon: 'https://cdn.simpleicons.org/github/white' },
   { name: 'Postman', icon: 'https://cdn.simpleicons.org/postman' },
   { name: 'Python', icon: 'https://cdn.simpleicons.org/python' },
-  { name: 'Django', icon: 'https://cdn.simpleicons.org/django/white' },
+  // { name: 'Django', icon: 'https://cdn.simpleicons.org/django/white' },
+  { name: 'Tensorflow', icon: 'https://cdn.simpleicons.org/tensorflow' },
   { name: 'Flutter', icon: 'https://cdn.simpleicons.org/flutter' },
   { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma' },
 ];
@@ -27,8 +28,8 @@ const skills = [
 export default function Skills() {
   return (
     <div className="mt-30">
-        <p>My Tech Stack</p>
-        <div className="mx-auto mt-6 flex max-w-4xl flex-wrap gap-2 text-lg text-gray-800 lg:gap-4">
+        <p className="text-xl">My tech stack.</p>
+        <div className="mx-auto mt-10 flex max-w-4xl flex-wrap gap-2 text-lg text-gray-800 lg:gap-4">
         {skills.map((skill) => (
             <div
             key={skill.name}

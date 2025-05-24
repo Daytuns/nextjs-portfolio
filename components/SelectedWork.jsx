@@ -5,38 +5,7 @@ import Link from 'next/link'
 const SelectedWork = () => {
   return (
     <div className="mt-40 flex flex-col items-start justify-start">
-      <p>Selected Work</p>
-
-      {/* VibeHex */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
-        <ProjectCard
-          title="VibeHex"
-          href="https://daytuns.github.io/vibehex-frontend-live/"
-          imageSrc="/HeroVibeHex.png"
-          description="Type in any prompt and get a matching color palette with this AI color palette generator."
-          gradient="linear-gradient(188.62deg, rgb(8, 57, 38) 49.9%, rgb(5, 150, 105) 81.7%, rgb(52, 211, 153) 93.88%, rgb(249, 215, 147) 113.5%)"
-          imageShadow="shadow-[0_0_30px_#059669]"
-          accentColor="text-emerald-300"
-        />
-        <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
-          <div className="flex gap-5 items-center w-full">
-            <h3 className="text-lg font-bold text-emerald-300">VibeHex</h3>
-            <Link
-              target="_blank"
-              href="https://github.com/Daytuns/vibehex-ai-palette-generator"
-              className="grey-links text-lg font-light"
-            >
-              Code
-            </Link>
-          </div>
-          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base lg:text-sm text-[#777a81] h-full">
-            <li>- Responsive and intuitive UI using vanilla JavaScript and Framer Motion for loading animations.</li>
-            <li>- The app sends the prompt to a Node.js Express backend, which queries Gemini Flash 2.0 via API.</li>
-            <li>- Gemini returns 5 hex color codes based on the prompt.</li>
-            <li>- Each color is shown as a block with readable text you can copy to clipboard.</li>
-          </ul>
-        </div>
-      </div>
+      <p className='text-xl'>Selected work. <span className='text-[#777a81]'>Take a look at some of my projects.</span></p>
 
       {/* Last of Us Quiz */}
       {/* <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
@@ -70,7 +39,7 @@ const SelectedWork = () => {
       </div> */}
 
       {/* Next Ventures */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
+      <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
         <ProjectCard
           title="Next Ventures"
           href="https://your-next-ventures-link.com"
@@ -91,42 +60,11 @@ const SelectedWork = () => {
               Code
             </Link>
           </div>
-          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base lg:text-sm text-[#777a81] h-full">
+          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
             <li>- Built with Next.js and Tailwind CSS for rapid performance and styling.</li>
             <li>- Clean, bold layout to highlight business ideas and pitches.</li>
             <li>- Sections for trending ideas, user submissions, and investor profiles.</li>
             <li>- Emphasis on accessibility and responsiveness across all devices.</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Zenith Minds */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
-        <ProjectCard
-          title="Zenith Minds"
-          href="https://your-zenith-minds-link.com"
-          imageSrc="/zenith.jpg"
-          description="A platform connecting students and instructors for enhanced learning experiences."
-          gradient="linear-gradient(188.62deg, rgb(7, 14, 87) 49.9%, rgb(41, 50, 203) 81.7%, rgb(121, 128, 255) 93.88%, rgb(249, 215, 147) 113.5%)"
-          imageShadow="shadow-[0_0_30px_#2932CB]"
-          accentColor="text-blue-300"
-        />
-        <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
-          <div className="flex gap-5 items-center w-full">
-            <h3 className="text-lg font-bold text-blue-300">Zenith Minds</h3>
-            <Link
-              target="_blank"
-              href="https://github.com/Daytuns/zenith-minds"
-              className="grey-links text-lg font-light"
-            >
-              Code
-            </Link>
-          </div>
-          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base lg:text-sm text-[#777a81] h-full">
-            <li>- Platform to connect students and instructors with enhanced UX.</li>
-            <li>- Uses Firebase for authentication and Firestore for real-time data.</li>
-            <li>- UI inspired by academic dashboards and modular design.</li>
-            <li>- Role-based views for students, instructors, and admins.</li>
           </ul>
         </div>
       </div>
@@ -153,7 +91,7 @@ const SelectedWork = () => {
               Code
             </Link>
           </div>
-          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base lg:text-sm text-[#777a81] h-full">
+          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
             <li>- Built with Next.js, Tailwind, and Framer Motion for modern animation.</li>
             <li>- Fully responsive layout, dark mode, and mouse-tracking hover previews.</li>
             <li>- Styled sections with unique gradients and subtle glass effects.</li>
@@ -161,6 +99,70 @@ const SelectedWork = () => {
           </ul>
         </div>
       </div>
+
+      {/* Zenith Minds */}
+      <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
+        <ProjectCard
+          title="Zenith Minds"
+          href="https://your-zenith-minds-link.com"
+          imageSrc="/zenith.jpg"
+          description="A platform connecting students and instructors for enhanced learning experiences."
+          gradient="linear-gradient(188.62deg, rgb(7, 14, 87) 49.9%, rgb(41, 50, 203) 81.7%, rgb(121, 128, 255) 93.88%, rgb(249, 215, 147) 113.5%)"
+          imageShadow="shadow-[0_0_30px_#2932CB]"
+          accentColor="text-blue-300"
+        />
+        <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
+          <div className="flex gap-5 items-center w-full">
+            <h3 className="text-lg font-bold text-blue-300">Zenith Minds</h3>
+            <Link
+              target="_blank"
+              href="https://github.com/Daytuns/zenith-minds"
+              className="grey-links text-lg font-light"
+            >
+              Code
+            </Link>
+          </div>
+          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
+            <li>- Platform to connect students and instructors with enhanced UX.</li>
+            <li>- Uses Firebase for authentication and Firestore for real-time data.</li>
+            <li>- UI inspired by academic dashboards and modular design.</li>
+            <li>- Role-based views for students, instructors, and admins.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* VibeHex */}
+      <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
+        <ProjectCard
+          title="VibeHex"
+          href="https://daytuns.github.io/vibehex-frontend-live/"
+          imageSrc="/HeroVibeHex.png"
+          description="Type in any prompt and get a matching color palette with this AI color palette generator."
+          gradient="linear-gradient(188.62deg, rgb(8, 57, 38) 49.9%, rgb(5, 150, 105) 81.7%, rgb(52, 211, 153) 93.88%, rgb(249, 215, 147) 113.5%)"
+          imageShadow="shadow-[0_0_30px_#059669]"
+          accentColor="text-emerald-300"
+        />
+        <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
+          <div className="flex gap-5 items-center w-full">
+            <h3 className="text-lg font-bold text-emerald-300">VibeHex</h3>
+            <Link
+              target="_blank"
+              href="https://github.com/Daytuns/vibehex-ai-palette-generator"
+              className="grey-links text-lg font-light"
+            >
+              Code
+            </Link>
+          </div>
+          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
+            <li>- Responsive and intuitive UI using vanilla JavaScript and Framer Motion for loading animations.</li>
+            <li>- The app sends the prompt to a Node.js Express backend, which queries Gemini Flash 2.0 via API.</li>
+            <li>- Gemini returns 5 hex color codes based on the prompt.</li>
+            <li>- Each color is shown as a block with readable text you can copy to clipboard.</li>
+          </ul>
+        </div>
+      </div>
+
+      
     </div>
   )
 }

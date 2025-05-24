@@ -14,7 +14,7 @@ const Intro = () => {
   }
 
   return (
-    <>
+    <div className=''>
       <div className="font-bold text-4xl/12 mt-80">
           <p><NamePopover />, <br />
           fullstack{' '}
@@ -58,7 +58,7 @@ const Intro = () => {
         <a href='https://www.linkedin.com/in/daytonbaldizon/' target="_blank" className="grey-links">Linkedin</a>
         <a href='https://github.com/Daytuns' target="_blank" className="grey-links">Github</a>
       </div>
-    </>
+    </div>
   )
 }
 
