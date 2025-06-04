@@ -1,3 +1,5 @@
+import ShinyText from "./blocks/TextAnimations/ShinyText/ShinyText";
+
 const skills = [
   { name: 'HTML', icon: 'https://cdn.simpleicons.org/html5' },
   { name: 'CSS', icon: 'https://cdn.simpleicons.org/css3' },
@@ -29,11 +31,11 @@ export default function Skills() {
   return (
     <div className="mt-30">
         <p className="text-xl">My tech stack.</p>
-        <div className="mx-auto mt-10 flex max-w-4xl flex-wrap gap-2 text-lg text-gray-800 lg:gap-4">
+        <div className="mx-auto mt-10 flex max-w-4xl flex-wrap gap-2 text-lg lg:gap-4">
         {skills.map((skill) => (
             <div
             key={skill.name}
-            className="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-900 px-4 py-1.5 text-sm text-white/80 lg:text-base"
+            className="flex items-center justify-center gap-2 rounded-xl border border-white/[0.14] bg-neutral-950 px-4 py-1.5 text-sm text-white/80 lg:text-base"
             >
             <img
                 src={skill.icon}
@@ -42,7 +44,7 @@ export default function Skills() {
                 height="18"
                 width="18"
             />
-            <span className="cursor-default">{skill.name}</span>
+            <ShinyText text={skill.name} disabled={false} speed={3} className='custom-class cursor-default' />
             </div>
         ))}
         </div>

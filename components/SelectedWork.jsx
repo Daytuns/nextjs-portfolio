@@ -5,7 +5,7 @@ import Link from 'next/link'
 const SelectedWork = () => {
   return (
     <div className="mt-40 flex flex-col items-start justify-start">
-      <p className='text-xl'>Selected work. <span className='text-[#777a81]'>Take a look at some of my projects.</span></p>
+      <p className='text-xl'>Selected work. <span className='text-[#777a81]'>A collection of ideas I've brought to life.</span></p>
 
       {/* Last of Us Quiz */}
       {/* <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
