@@ -9,6 +9,7 @@ export const ThingsILikeTable = () => {
     "Swiss design",
     "Night coding sessions",
     "When the gym is empty",
+    "Minimalism and dark mode",
     "Documentation rabbit holes",
     ""
   ];

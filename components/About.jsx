@@ -5,8 +5,8 @@ import { ThingsILikeTable } from './ThingsILikeTable'
 const About = () => {
   return (
     <div className='mt-15 mb-5'>
-        <p className='text-large'>About me. <span className='text-[#777a81]'>My education and things I like.</span></p>
-        <p className='mt-15 text-[#777a81] text-large'>
+        <p className='text-base'>About me. <span className='text-[#777a81]'>My education and things I like.</span></p>
+        <p className='mt-15 text-[#777a81] text-base'>
             <span className='font-semibold'>Curiosity.&nbsp; Persistence.&nbsp; Adaptability. </span>
             These three words drive how I approach life, learning, and problem-solving. <br /> <br />
             I graduated from <span className='text-gray-300'>John Brown University</span> in Siloam Springs, Arkansas, where I earned a Bachelor of Science in <span className='text-gray-300'>Electrical Engineering</span> with a minor in <span className='text-gray-300'>Computer Science</span>. During this time I had the opportunity to learn across disciplines, from embedded systems to creative design. <br /><br />

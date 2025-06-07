@@ -8,22 +8,22 @@ import Footer from './Footer'
 import Skills from './Skills'
 import LastPlayed from './LastPlayed' 
 import SelectedWork from './SelectedWork'
+import InPageNav from './InPageNav'
 
 const Home = () => {
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <Nav />
-      <Intro />
-      {/* <div className='mt-20'>
-        <div className="border-b border-black"></div>
-        <div className="border-b border-[#171717]"></div>
-      </div> */}
-      {/* <Projects /> */}
-      <SelectedWork />
-      {/* <Skills /> */}
-      <About />
-      <LastPlayed /> 
-      <Footer />
+    <div className='flex'>
+      <InPageNav/>
+      <div className="w-full max-w-2xl mx-auto">
+        <Nav />
+        <div id='intro'><Intro /></div>
+        {/* <Projects /> */}
+        <div id='work'><SelectedWork /></div>
+        {/* <Skills /> */}
+        <div id='about'><About />
+        <LastPlayed /></div>
+        <Footer />
+      </div>
     </div>
   )
 }
