@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 import Link from 'next/link'
+import IPodCard from './IPodCard'
 
 const SelectedWork = () => {
   return (
@@ -39,11 +40,11 @@ const SelectedWork = () => {
       </div> */}
 
       {/* Next Ventures */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
-        <ProjectCard
-          title="Next Ventures"
+      {/* <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
+        <IPodCard
+          title="Reimagining the iPod"
           href="https://your-next-ventures-link.com"
-          imageSrc="/next-venture.webp"
+          imageSrc="/iPod.png"
           description="An online space for entrepreneurs to pitch ideas, explore others, and gain exposure with clean design."
           gradient="linear-gradient(188.62deg, rgb(107, 13, 51) 49.9%, rgb(219, 39, 119) 81.7%, rgb(244, 114, 182) 93.88%, rgb(249, 215, 147) 113.5%)"
           imageShadow="shadow-[0_0_30px_#DB2777]"
@@ -67,10 +68,10 @@ const SelectedWork = () => {
             <li>- Emphasis on accessibility and responsiveness across all devices.</li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Personal Portfolio */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
+      {/* <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
         <ProjectCard
           title="Personal Portfolio"
           href="https://your-portfolio-link.com"
@@ -98,22 +99,22 @@ const SelectedWork = () => {
             <li>- Fast-loading, SEO optimized, and deployed on Vercel.</li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Zenith Minds */}
       <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
-        <ProjectCard
-          title="Zenith Minds"
+        <IPodCard
+          title="Reimagining the iPod"
           href="https://your-zenith-minds-link.com"
-          imageSrc="/zenith.jpg"
-          description="A platform connecting students and instructors for enhanced learning experiences."
+          imageSrc="/iPod.png"
+          description="Minimalist, always-on-top Spotify player styled like an iPod."
           gradient="linear-gradient(188.62deg, rgb(7, 14, 87) 49.9%, rgb(41, 50, 203) 81.7%, rgb(121, 128, 255) 93.88%, rgb(249, 215, 147) 113.5%)"
           imageShadow="shadow-[0_0_30px_#2932CB]"
           accentColor="text-blue-300"
         />
         <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
           <div className="flex gap-5 items-center w-full">
-            <h3 className="text-lg font-bold text-blue-300">Zenith Minds</h3>
+            <h3 className="text-lg font-bold text-blue-300">Reimagining the iPod</h3>
             <Link
               target="_blank"
               href="https://github.com/Daytuns/zenith-minds"
@@ -122,12 +123,13 @@ const SelectedWork = () => {
               Code
             </Link>
           </div>
-          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
-            <li>- Platform to connect students and instructors with enhanced UX.</li>
-            <li>- Uses Firebase for authentication and Firestore for real-time data.</li>
-            <li>- UI inspired by academic dashboards and modular design.</li>
-            <li>- Role-based views for students, instructors, and admins.</li>
-          </ul>
+          {/* <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
+            <li>- Built with React and Tailwind CSS.</li>
+            <li>- Powered by the Spotify Web API via OAuth.</li>
+            <li>- NodeJS and Express server</li>
+            <li>- Wrapped in Electron to make it a desktop app.</li>
+            <li>- Designed for focus — no clutter, just essential controls and elegant music interaction.</li>
+          </ul> */}
         </div>
       </div>
 
@@ -153,12 +155,12 @@ const SelectedWork = () => {
               Code
             </Link>
           </div>
-          <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
+          {/* <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
             <li>- Responsive and intuitive UI using vanilla JavaScript and Framer Motion for loading animations.</li>
             <li>- The app sends the prompt to a Node.js Express backend, which queries Gemini Flash 2.0 via API.</li>
             <li>- Gemini returns 5 hex color codes based on the prompt.</li>
             <li>- Each color is shown as a block with readable text you can copy to clipboard.</li>
-          </ul>
+          </ul> */}
         </div>
       </div>
 
