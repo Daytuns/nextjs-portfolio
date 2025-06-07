@@ -15,7 +15,7 @@ const Intro = () => {
 
   return (
     <div className=''>
-      <div className="font-bold text-4xl/12 mt-80">
+      <div className="font-semibold text-2xl mt-30">
           <p><NamePopover />, <br />
           fullstack{' '}
           <span className="bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">
@@ -24,10 +24,10 @@ const Intro = () => {
           and electrical engineer
         </p>
       </div>
-      <div className="flex flex-row gap-5 mt-5 text-2xl">
+      <div className="flex flex-row gap-5 mt-5 text-large">
         <div onClick={CopyEmail} className="group flex flex-row gap-1 items-center cursor-pointer">
           {copied ? (
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M5 13L9 17L19 7"
                 className="stroke-[#777a81] group-hover:stroke-[#9f9ea0]"
@@ -37,8 +37,8 @@ const Intro = () => {
           (
           <svg
             style={{ transform: 'scaleX(-1)' }}
-            width="18"
-            height="18"
+            width="15"
+            height="15"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +57,10 @@ const Intro = () => {
         </div>
         <a href='https://www.linkedin.com/in/daytonbaldizon/' target="_blank" className="grey-links">Linkedin</a>
         <a href='https://github.com/Daytuns' target="_blank" className="grey-links">Github</a>
+      </div>
+      <div className='mt-15'>
+        <div className="border-b border-black"></div>
+        <div className="border-b border-[#171717]"></div>
       </div>
     </div>
   )

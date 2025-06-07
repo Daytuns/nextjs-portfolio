@@ -5,7 +5,7 @@ export default function NamePopover() {
   return (
     <Popover placement="top" showArrow={true}>
       <PopoverTrigger>
-        <Button className='text-4xl/12 font-bold rounded-xl px-0'>Dayton Baldizón</Button>
+        <Button className='text-2xl font-semibold rounded-xl px-0'>Dayton Baldizón</Button>
       </PopoverTrigger>
       <PopoverContent>
         <div className="px-1 py-2">

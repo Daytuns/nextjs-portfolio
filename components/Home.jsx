@@ -11,12 +11,16 @@ import SelectedWork from './SelectedWork'
 
 const Home = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-2xl mx-auto">
       <Nav />
       <Intro />
+      {/* <div className='mt-20'>
+        <div className="border-b border-black"></div>
+        <div className="border-b border-[#171717]"></div>
+      </div> */}
       {/* <Projects /> */}
       <SelectedWork />
-      <Skills />
+      {/* <Skills /> */}
       <About />
       <LastPlayed /> 
       <Footer />

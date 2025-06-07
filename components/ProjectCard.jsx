@@ -6,9 +6,9 @@ export default function ProjectCard({
   href,
   imageSrc,
   description,
-  gradient,     // <-- new prop
-  imageShadow,  // <-- new prop
-  accentColor = 'text-emerald-300' // default fallback
+  gradient,     
+  imageShadow,  
+  accentColor = 'text-emerald-300' 
 }) {
   return (
     <div className="project-card flex w-full flex-row mt-8">
@@ -17,7 +17,7 @@ export default function ProjectCard({
           href={href}
           target="_blank"
           draggable={false}
-          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[380px] lg:rounded-3xl lg:p-2"
+          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[256px] lg:rounded-3xl lg:p-2"
         >
           {/* Top glow line */}
           <div
@@ -44,7 +44,7 @@ export default function ProjectCard({
 
             {/* Text content */}
             <div className={`w-full flex-row items-center justify-between px-10 pt-8 ${accentColor} lg:flex`}>
-              <h3 className="max-w-[90%] text-xl">{description}</h3>
+              <h3 className="max-w-[90%] text-large">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -55,7 +55,7 @@ export default function ProjectCard({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-arrow-right size-6"
+                className="lucide lucide-arrow-right size-4"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
@@ -67,7 +67,7 @@ export default function ProjectCard({
               alt={title}
               src={imageSrc}
               width={1203}
-              height={753}
+              height={900}
               loading="lazy"
               className={`relative bottom-0.5 w-full max-w-[90%] lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3`}
               style={{ color: 'transparent' }}

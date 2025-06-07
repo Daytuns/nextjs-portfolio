@@ -5,8 +5,8 @@ import IPodCard from './IPodCard'
 
 const SelectedWork = () => {
   return (
-    <div className="mt-40 flex flex-col items-start justify-start">
-      <p className='text-xl'>Selected work. <span className='text-[#777a81]'>A collection of ideas I've brought to life.</span></p>
+    <div className="mt-15 flex flex-col items-start justify-start">
+      <p className='text-large'>Featured work. <span className='text-[#777a81]'>Some ideas I've brought to life.</span></p>
 
       {/* Last of Us Quiz */}
       {/* <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
@@ -101,8 +101,9 @@ const SelectedWork = () => {
         </div>
       </div> */}
 
-      {/* Zenith Minds */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-10">
+      {/* iPod and vibehex */}
+      <div className='flex gap-5 w-full'>
+        <div className="flex flex-col lg:flex-row gap-8 w-[16rem] mt-5">
         <IPodCard
           title="Reimagining the iPod"
           href="https://your-zenith-minds-link.com"
@@ -112,7 +113,20 @@ const SelectedWork = () => {
           imageShadow="shadow-[0_0_30px_#2932CB]"
           accentColor="text-blue-300"
         />
-        <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
+        </div>
+        <div className="w-[24rem] mt-5">
+        <ProjectCard
+          title="VibeHex"
+          href="https://daytuns.github.io/vibehex-frontend-live/"
+          imageSrc="/HeroVibeHex.png"
+          description="AI powered color palette generator given any prompt."
+          gradient="linear-gradient(188.62deg, rgb(8, 57, 38) 49.9%, rgb(5, 150, 105) 81.7%, rgb(52, 211, 153) 93.88%, rgb(249, 215, 147) 113.5%)"
+          imageShadow="shadow-[0_0_30px_#059669]"
+          accentColor="text-emerald-300"
+        />
+        </div>
+      </div>
+        {/* <div className="w-full lg:max-w-[30%] text-sm text-white lg:mt-10 flex flex-col gap-3">
           <div className="flex gap-5 items-center w-full">
             <h3 className="text-lg font-bold text-blue-300">Reimagining the iPod</h3>
             <Link
@@ -122,7 +136,7 @@ const SelectedWork = () => {
             >
               Code
             </Link>
-          </div>
+          </div> */}
           {/* <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
             <li>- Built with React and Tailwind CSS.</li>
             <li>- Powered by the Spotify Web API via OAuth.</li>
@@ -130,11 +144,10 @@ const SelectedWork = () => {
             <li>- Wrapped in Electron to make it a desktop app.</li>
             <li>- Designed for focus — no clutter, just essential controls and elegant music interaction.</li>
           </ul> */}
-        </div>
-      </div>
+        {/* </div> */}
 
       {/* VibeHex */}
-      <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
+      {/* <div className="flex flex-col lg:flex-row gap-8 w-full mt-5">
         <ProjectCard
           title="VibeHex"
           href="https://daytuns.github.io/vibehex-frontend-live/"
@@ -154,15 +167,15 @@ const SelectedWork = () => {
             >
               Code
             </Link>
-          </div>
+          </div> */}
           {/* <ul className="list-inside list-none justify-evenly flex flex-col gap-2 text-base text-[#777a81] h-full">
             <li>- Responsive and intuitive UI using vanilla JavaScript and Framer Motion for loading animations.</li>
             <li>- The app sends the prompt to a Node.js Express backend, which queries Gemini Flash 2.0 via API.</li>
             <li>- Gemini returns 5 hex color codes based on the prompt.</li>
             <li>- Each color is shown as a block with readable text you can copy to clipboard.</li>
           </ul> */}
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
 
       
     </div>

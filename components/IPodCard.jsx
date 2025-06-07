@@ -17,7 +17,7 @@ export default function IPodCard({
           href={href}
           target="_blank"
           draggable={false}
-          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[380px] lg:rounded-3xl lg:p-2"
+          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[350px] lg:rounded-3xl lg:p-2"
         >
           {/* Top glow line */}
           <div
@@ -43,8 +43,8 @@ export default function IPodCard({
             />
 
             {/* Text content */}
-            <div className={`w-full flex-row items-center justify-between px-10 pt-8 ${accentColor} lg:flex`}>
-              <h3 className="max-w-[90%] text-xl">{description}</h3>
+            <div className={`w-full flex-row items-center justify-between px-8 pt-8 ${accentColor} lg:flex`}>
+              <h3 className="max-w-[85%] text-large">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -55,7 +55,7 @@ export default function IPodCard({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-arrow-right size-6"
+                className="lucide lucide-arrow-right size-4"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
@@ -66,10 +66,10 @@ export default function IPodCard({
             <Image
               alt={title}
               src={imageSrc}
-              width={148}
+              width={192/2}
               // 192/1.3
-              height={338}
-              //440/1.3
+              height={220}
+              //440/1.3 = 338
               loading="lazy"
               className={`relative bottom-0.5 lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3`}
               style={{ color: 'transparent' }}
