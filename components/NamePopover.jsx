@@ -9,7 +9,7 @@ export default function NamePopover() {
       </PopoverTrigger>
       <PopoverContent>
         <div className="px-1 py-2">
-            <img className="w-40 h-40 object-cover rounded-xl"src="/PortfolioPic.jpeg" />
+            <img className="w-30 h-30 object-cover rounded-xl"src="/PortfolioPic.jpeg" />
         </div>
       </PopoverContent>
     </Popover>

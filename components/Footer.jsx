@@ -10,11 +10,7 @@ const Footer = () => {
     <div className='flex justify-between py-8'>
         <p className='text-xs text-[#9f9ea0]'>&copy; 2025 Dayton Baldizón</p>
         <div className='flex flex-row items-center'>
-          <div className="mr-2 flex h-3 w-3 items-center justify-center">
-            <div className="h-1 w-1 rounded-full bg-green-500"></div>
-            <div className="absolute h-2 w-2 animate-ping rounded-full bg-green-500 opacity-75"></div>
-          </div>
-          <p className="text-xs text-[#9f9ea0]">Currently available for new opportunities</p>
+          <p className="text-xs text-[#9f9ea0]">May '25</p>
         </div>
     </div>
     </>

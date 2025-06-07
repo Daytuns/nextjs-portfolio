@@ -64,16 +64,17 @@ export default function IPodCard({
 
             {/* Project image */}
             <Image
-              alt={title}
-              src={imageSrc}
-              width={192/2}
-              // 192/1.3
-              height={220}
-              //440/1.3 = 338
-              loading="lazy"
-              className={`relative bottom-0.5 lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3`}
-              style={{ color: 'transparent' }}
+                alt={title}
+                src={imageSrc}
+                width={363}
+                height={828}
+                className={`relative bottom-0.5 lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 object-contain`}
+                style={{
+                    maxHeight: '100%', maxWidth: '55%', height: 'auto', color: 'transparent'
+                }}
+                loading="lazy"
             />
+
           </div>
         </Link>
       </div>

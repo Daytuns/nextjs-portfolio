@@ -54,7 +54,7 @@ const LastPlayed = () => {
             href={lastPlayedItem.track.external_urls.spotify}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-blue-500 hover:underline"
+            className="text-sm text-blue-500 hover:text-blue-400 transition-colors duration-200"
           >
             Listen on Spotify
           </a>
