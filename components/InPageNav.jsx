@@ -8,7 +8,7 @@ const InPageNav = () => {
     id: "about",
     label: "About",
     children: [
-      { id: "education", label: "Education" },
+      { id: "education", label: "Information" },
       { id: "thingsIlike", label: "Things I like" },
     ],
   },
