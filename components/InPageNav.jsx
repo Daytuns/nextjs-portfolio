@@ -62,7 +62,7 @@ const allIds = links.flatMap(link =>
 
 
   return (
-    <nav className="fixed right-100 top-15 text-sm space-y-2 z-10 border-l-1 border-[#171717] pl-4">
+    <nav className="fixed right-100 top-15 text-xs space-y-2 z-10 border-l-1 border-[#171717] pl-4">
       <h3 className="text-white font-medium mb-3">On this page</h3>
       {links.map(link => (
         <div key={link.id}>

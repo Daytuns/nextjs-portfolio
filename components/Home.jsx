@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className='flex'>
       <InPageNav/>
-      <div className="w-full max-w-2xl mx-auto">
+      <div className="w-full max-w-xl mx-auto">
         <Nav />
         <div id='intro'><Intro /></div>
         {/* <Projects /> */}
