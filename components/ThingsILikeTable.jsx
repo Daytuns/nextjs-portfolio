@@ -26,9 +26,9 @@ export const ThingsILikeTable = () => {
   return (
     <>
       <div className="mb-3">
-        <h2 className="text-large mt-15 text-white">Things I like.</h2>
+        <h2 className="mt-15 text-white">Things I like.</h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mb-15">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mb-15 text-sm">
         {thingsILike.map((thing, index) => {
           const isHighlighted = highlighted === index;
 

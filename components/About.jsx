@@ -1,59 +1,93 @@
 import React from 'react';
 import Chihuahua from './ChihuahuaPopover';
 import { ThingsILikeTable } from './ThingsILikeTable';
-
-const TldrBadge = ({ label }) => (
-  <div className="bg-zinc-900/60 backdrop-blur-sm border border-[#2a2a2a] text-zinc-400 text-xs tracking-wide px-4 py-1 rounded-full w-fit transition-all hover:scale-[1.02] hover:bg-zinc-800/60 hover:border-[#444] cursor-default">
-    {label}
-  </div>
-);
+import EducationCard from './EducationCard';
+import { CheckCircle } from "lucide-react";
 
 const About = () => {
   return (
     <div className="mt-20 mb-10 text-[#777a81]">
       {/* About me heading */}
       <div className="mb-10">
-        <p className="text-white">
-          About me.<span className="text-[#777a81]"> A little bit about who I am and the things I like.</span>
-        </p>
+        <p className="text-white">About me. <span>And the things I do.</span></p>
       </div>
 
       {/* Flex content area */}
       <div className="flex flex-col md:flex-row gap-10">
-        
+
         {/* LEFT COLUMN */}
         <div className="flex-[2] space-y-16">
-          <section className="space-y-6">
-            <p>
-              <span className="">Curiosity. Persistence. Adaptability.</span> These three words drive how I approach life, learning, and problem-solving.
-            </p>
-            <p>
-              Whether it’s through code, circuits, or conversations, I’m always seeking to grow, connect, and contribute.
-            </p>
-          </section>
+          <section className="space-y-15 text-[#777a81]" id="education">
+            <div>
+              <p className="text-white text-sm">What</p>
+              <p className='text-sm'>
+                Today, I’m a developer. I build for the web because it’s fast, expressive, and fun. Whether front-end or full stack, I’m drawn to the creativity and impact that come with shipping real things to real users.
+              </p>
+            </div>
 
-          <section className="space-y-4" id="education">
-            <h3 className="text-white">Education</h3>
-            <p>
-              I graduated from <span className="text-gray-300">John Brown University</span> in Siloam Springs, Arkansas, where I earned a Bachelor of Science in <span className="text-gray-300">Electrical Engineering</span> with a minor in <span className="text-gray-300">Computer Science</span>. I explored a wide range of topics from embedded systems to creative design.
-            </p>
-          </section>
+            <div>
+              <p className="text-white text-sm">How</p>
+              <p className='text-sm'>
+                I navigate life and work with curiosity, persistence, and adaptability. Whether learning a new tool or tackling a tough problem, I approach it with depth and resilience. I enjoy building solutions that are not only technically sound but thoughtfully designed.
+              </p>
+            </div>
 
-          <section className="space-y-4">
-            <h3 className="text-white">Outside of work</h3>
-            <p>
-              I find joy in the simple and meaningful things: playing and watching soccer, working out, spending time with my three energetic <Chihuahua />, and having conversations that dive into people’s passions. I'm also captivated by visual art and how it communicates emotion and ideas. This shapes how I think about both technology and design.
-            </p>
+            <div>
+              <p className="text-white text-sm">Why</p>
+              <p className='text-sm'>
+                Because understanding and creating things gives me purpose. Whether it’s a circuit, a piece of code, or a new idea, I’m wired to explore it, refine it, and make it work better.
+              </p>
+            </div>
+
+            <div className="space-y-2 gap-0">
+              <p className='text-white text-sm'>Degree</p>
+              <EducationCard
+                imageSrc="/jbu.png"
+                altText="John Brown University"
+                title="Bachelor of Science in Electrical Engineering"
+                subtitle="Minor in Computer Science"
+                detail="John Brown University"
+              />
+            </div>
+
+            <div>
+              <p className="text-white text-sm">What my <Chihuahua /> say</p>
+              <p className='text-sm'>
+                “Always chasing goals—unless we bark loud enough to distract him.”
+              </p>
+            </div>
           </section>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex-[1] space-y-4 sticky top-32 self-start">
-          <TldrBadge label="Curious, persistent, adaptable" />
-          <TldrBadge label="Build. Connect. Grow." />
-          <TldrBadge label="EE + CS @ JBU" />
-          <TldrBadge label="Soccer. Art. Gym. Dogs." />
-          <TldrBadge label="Fueled by coffee" />
+        <div className="flex-[1] sticky top-32 self-start space-y-6 text-sm text-[#a1a1aa]">
+
+          {/* Stats & Traits */}
+          <div className="space-y-2">
+            <p className="text-white font-medium">Stats & Traits</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full text-xs bg-blue-950 text-blue-300 border border-blue-800 hover:bg-blue-900 transition-all">Curious</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-neutral-800 text-zinc-300 border border-neutral-700 hover:bg-neutral-700 transition-all">Persistent</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-sky-950 text-sky-300 border border-sky-800 hover:bg-sky-900 transition-all">Adaptable</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-red-950 text-red-300 border border-red-800 hover:bg-red-900 transition-all">Debug Mode</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-green-950 text-green-300 border border-green-800 flex items-center gap-1 hover:bg-green-900 transition-all">
+                <CheckCircle className="w-3 h-3" /> FE Certified
+              </span>
+            </div>
+          </div>
+
+          {/* Vitals */}
+          <div className="space-y-2">
+            <p className="text-white font-medium">Vitals</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full text-xs bg-blue-950 text-blue-200 border border-blue-800">EE + CS @ JBU</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-purple-950 text-purple-200 border border-purple-800">Soccer</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-amber-950 text-amber-300 border border-amber-800">Gym</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-pink-950 text-pink-200 border border-pink-800">3 Tiny Dogs</span>
+              <span className="px-3 py-1 rounded-full text-xs bg-neutral-700 text-white border border-neutral-600">Coffee</span>
+            </div>
+          </div>
+
         </div>
       </div>
 

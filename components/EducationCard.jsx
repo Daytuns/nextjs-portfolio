@@ -1,26 +1,23 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-const EducationCard = () => {
+const EducationCard = ({ imageSrc, altText, title, subtitle, detail }) => {
   return (
-        <div className='rounded-lg border border-gray-800/50 w-1/2 p-4 flex gap-5'>
-            <Image
-                className='rounded-lg object-cover'
-                src={'/jbu.png'}
-                width={65}
-                height={65}
-                style={{
-                objectFit: 'cover',
-                borderRadius: '8px',
-            }}
-            />
-            <div className='flex flex-col'>
-                <h1 className='text-sm'>Baschelor of Science in Electrical Engineering</h1>
-                <h2 className='text-[#777a81] text-sm'>John Brown University</h2>
-            </div>
+    <div className="flex items-center gap-3 w-fit">
+      {/* <Image
+        src={imageSrc}
+        alt={altText}
+        width={60}
+        height={60}
+        className="rounded-md"
+      /> */}
+      <div className="text-sm leading-tight text-white/90">
+        <p className="">{title}</p>
+        <p className="text-white/70">{subtitle}</p>
+        <p className="text-white/50">{detail}</p>
+      </div>
+    </div>
+  );
+};
 
-        </div>
-  )
-}
-
-export default EducationCard
+export default EducationCard;
