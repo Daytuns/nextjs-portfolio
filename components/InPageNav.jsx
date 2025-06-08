@@ -2,60 +2,102 @@ import { useEffect, useState } from "react"
 
 const InPageNav = () => {
   const links = [
-    { id: "intro", label: "Intro" },
-    { id: "work", label: "Work" },
-    { id: "about", label: "About" },
-  ]
+  { id: "intro", label: "Intro" },
+  { id: "work", label: "Work" },
+  {
+    id: "about",
+    label: "About",
+    children: [
+      { id: "education", label: "Education" },
+      { id: "thingsIlike", label: "Things I like" },
+    ],
+  },
+]
 
-  const [activeId, setActiveId] = useState("")
+const allIds = links.flatMap(link =>
+  link.children ? [link.id, ...link.children.map(child => child.id)] : [link.id]
+)
 
-  useEffect(() => {
+    const [activeParentId, setActiveParentId] = useState("")
+    const [activeChildId, setActiveChildId] = useState("")
+
+    useEffect(() => {
     const handleScroll = () => {
-      let newActiveId = ""
+        let newParentId = ""
+        let newChildId = ""
 
-      for (let i = 0; i < links.length; i++) {
-        const section = document.getElementById(links[i].id)
-        if (!section) continue
-
-        const rect = section.getBoundingClientRect()
-        const sectionBottom = rect.bottom
-
-        if (sectionBottom > window.innerHeight * 0.2) {
-          newActiveId = links[i].id
-          break // we found the current section
+        for (let link of links) {
+        const section = document.getElementById(link.id)
+        if (section) {
+            const rect = section.getBoundingClientRect()
+            if (rect.bottom > window.innerHeight * 0.2) {
+            newParentId = link.id
+            break
+            }
         }
-      }
+        }
 
-      setActiveId(newActiveId)
+        for (let link of links) {
+        if (!link.children) continue
+        for (let child of link.children) {
+            const section = document.getElementById(child.id)
+            if (section) {
+            const rect = section.getBoundingClientRect()
+            if (rect.bottom > window.innerHeight * 0.2) {
+                newChildId = child.id
+                break
+            }
+            }
+        }
+        }
+
+        setActiveParentId(newParentId)
+        setActiveChildId(newChildId)
     }
 
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // call once on mount
-
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    }, [])
+
 
   return (
-    <nav className="fixed right-110 top-15 ml-4 text-sm space-y-2 z-10">
+    <nav className="fixed right-100 top-15 text-sm space-y-2 z-10 border-l-1 border-[#171717] pl-4">
       <h3 className="text-white font-medium mb-3">On this page</h3>
-      {links.map((link) => (
-        <a
-          key={link.id}
-          href={`#${link.id}`}
-          className={`block py-1 ${
-            activeId === link.id ? "text-white font-medium" : "text-[#777a81]"
-          } hover:text-white transition-colors duration-200`}
-          onClick={(e) => {
-            e.preventDefault()
-            const element = document.getElementById(link.id)
-            if (element) {
-              element.scrollIntoView({ behavior: "smooth", block: "center" })
-            }
-          }}
-        >
-          {link.label}
-        </a>
-      ))}
+      {links.map(link => (
+        <div key={link.id}>
+            <a
+            href={`#${link.id}`}
+            className={`block py-1 ${activeParentId === link.id ? "text-white" : "text-[#777a81]"}`}
+            onClick={e => {
+                e.preventDefault()
+                document.getElementById(link.id)?.scrollIntoView({ behavior: "smooth", block: "center" })
+            }}
+            >
+            {link.label}
+            </a>
+
+            {/* Subsections */}
+            {link.children && (
+            <div className="ml-4">
+                {link.children.map(child => (
+                <a
+                    key={child.id}
+                    href={`#${child.id}`}
+                    className={`block py-1 ${activeChildId === child.id && activeParentId === 'about'? "text-white" : "text-[#777a81]"}`}
+                    onClick={e => {
+                    e.preventDefault()
+                    document.getElementById(child.id)?.scrollIntoView({ behavior: "smooth", block: "center" })
+                    }}
+                >
+                    {child.label}
+                </a>
+                ))}
+            </div>
+            )}
+        </div>
+        ))}
+
     </nav>
   )
 }
