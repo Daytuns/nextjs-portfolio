@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroui/react": "^2.8.0-beta.5",
+    "framer-motion": "^12.16.0",
     "lucide-react": "^0.513.0",
     "next": "15.3.2",
     "node-fetch": "^2.7.0",

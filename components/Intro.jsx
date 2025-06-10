@@ -59,8 +59,10 @@ const Intro = () => {
         <a href='https://github.com/Daytuns' target="_blank" className="grey-links">Github</a>
       </div>
       <div className='mt-15'>
-        <div className="border-b border-black"></div>
-        <div className="border-b border-[#171717]"></div>
+        <div className="border-b border-transparent"></div>
+        <div className="border-b border-transparent"></div>
+        {/* <div className="border-b border-black"></div>
+        <div className="border-b border-[#171717]"></div> */}
       </div>
     </div>
   )

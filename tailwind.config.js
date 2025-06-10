@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-radial-tl': 'radial-gradient(circle at top left, var(--tw-gradient-stops))',
+      },
       keyframes: {
         shine: {
           '0%': { backgroundPosition: '100%' },
