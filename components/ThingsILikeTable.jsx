@@ -47,7 +47,7 @@ export const ThingsILikeTable = () => {
                 rel="noopener noreferrer"
                 className={`${baseClasses} text-white cursor-pointer ${highlightedClasses}`}
               >
-                🎧{thing}
+                {thing}
               </a>
             );
           }

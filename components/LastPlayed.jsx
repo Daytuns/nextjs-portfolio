@@ -30,7 +30,7 @@ const LastPlayed = () => {
 
   return (
     <div className="mt-10 mb-20">
-      <p className="mb-2">Last Played</p>
+      <p className="mb-2 font-semibold text-large">Last Played</p>
       <div className="flex gap-3 items-center">
         <img
           src={lastPlayedItem.track.album.images[0].url}

@@ -17,7 +17,7 @@ export default function ProjectCard({
           href={href}
           target="_blank"
           draggable={false}
-          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[256px] lg:rounded-3xl lg:p-2"
+          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] shadow-2xl lg:h-[256px] lg:rounded-2xl"
         >
           {/* Top glow line */}
           <div
@@ -44,7 +44,7 @@ export default function ProjectCard({
 
             {/* Text content */}
             <div className={`w-full flex-row items-center justify-between px-10 pt-8 ${accentColor} lg:flex`}>
-              <h3 className="max-w-[90%] text-large">{description}</h3>
+              <h3 className="max-w-[90%]">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

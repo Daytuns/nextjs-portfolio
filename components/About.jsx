@@ -5,6 +5,7 @@ import EducationCard from './EducationCard';
 import { CheckCircle } from "lucide-react";
 import { Tabs, Tab } from "@heroui/react";
 import { AboutCards } from './AboutCards';
+import AboutLink from './AboutLink';
 
 const About = () => {
   const aboutSections = [
@@ -67,93 +68,64 @@ const About = () => {
 
       {/* <AboutCards /> */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-transparent p-0">
-  {/* Top Left – Black + Orange Radial Glow */}
-  <div className="relative p-6 min-h-[280px] flex flex-col justify-end overflow-hidden">
-    {/* Angular orange glow */}
+  {/* CARD TEMPLATE */}
+  {[
+    {
+      title: "What",
+      glow: "conic-gradient(from 180deg at center, rgba(251, 146, 60, 0.12), transparent 75%)",
+      blur: "blur(40px)",
+      content:
+        "I build for the web because it’s expressive, fast, and real. From front-end to full-stack, I thrive on creativity and shipping ideas into people’s hands.",
+    },
+    {
+      title: "How",
+      glow: "linear-gradient(135deg, rgba(147, 197, 253, 0.12), transparent 70%)",
+      blur: "blur(36px)",
+      content:
+        "With curiosity, persistence, and adaptability. I build systems that work as beautifully as they look.",
+    },
+    {
+      title: "Why",
+      glow: "radial-gradient(circle at top left, rgba(96, 165, 250, 0.14), transparent 70%)",
+      blur: "blur(32px)",
+      content:
+        "I’m wired to understand and create—from code to circuits to ideas. Building things gives me purpose.",
+    },
+    {
+      title: "What my chihuahuas say",
+      glow: "radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.2), transparent 70%)",
+      blur: "blur(48px)",
+      content:
+        "“Always chasing goals—unless we <Chihuahua /> loud enough to distract him.”",
+    },
+  ].map((card, i) => (
     <div
-      className="absolute inset-0 z-0"
-      style={{
-        backgroundImage:
-          "conic-gradient(from 180deg at center, rgba(251, 146, 60, 0.08), transparent 75%)",
-        filter: "blur(40px)",
-      }}
-    />
-    <div className="relative z-10">
-      <h3 className="text-white text-xl font-semibold mb-2">What</h3>
-      <p className="text-zinc-300 text-sm leading-relaxed">
-        Today, I’m a developer. I build for the web because it’s fast, expressive, and fun. Whether front‑end or full‑stack, I’m drawn to the creativity and impact of shipping real things to users.
-      </p>
+      key={i}
+      className="relative p-6 min-h-[280px] flex flex-col justify-end overflow-hidden rounded-2xl bg-white/2 border border-white/10 backdrop-blur-md shadow-lg shadow-black/20 transition-transform duration-300 hover:scale-[1.015]"
+    >
+      {/* Glow inside the glass */}
+      <div
+        className="absolute inset-0 z-0 rounded-2xl"
+        style={{
+          backgroundImage: card.glow,
+          filter: card.blur,
+        }}
+      />
+      <div className="relative z-10">
+        <h3 className="text-white text-xl md:text-2xl font-bold mb-2">
+          {card.title}
+        </h3>
+        <p className="text-[#d1d5db] text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: card.content }} />
+      </div>
     </div>
-  </div>
-
-
-  {/* Top Right – Black + Soft Blue Radial Glow */}
-  <div className="relative p-6 min-h-[280px] flex flex-col justify-end overflow-hidden">
-    {/* Diagonal blue gradient */}
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-        backgroundImage:
-          "linear-gradient(135deg, rgba(147, 197, 253, 0.06), transparent 70%)",
-        filter: "blur(36px)",
-      }}
-    />
-    <div className="relative z-10">
-      <h3 className="text-white text-xl font-semibold mb-2">How</h3>
-      <p className="text-zinc-300 text-sm leading-relaxed">
-        I navigate life and work through curiosity, persistence, and adaptability. I build solutions that are technically sound yet thoughtfully designed.
-      </p>
-    </div>
-  </div>
-
-
-  {/* Bottom Left – Transparent + Optional Glow */}
-  <div className="relative p-6 min-h-[280px] flex flex-col justify-end overflow-hidden">
-    {/* Offset radial blue glow */}
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle at top left, rgba(96, 165, 250, 0.08), transparent 70%)",
-        filter: "blur(32px)",
-      }}
-    />
-    <div className="relative z-10">
-      <h3 className="text-white text-xl font-semibold mb-2">Why</h3>
-      <p className="text-zinc-300 text-sm leading-relaxed">
-        Understanding and creating gives me purpose—whether a circuit, code, or idea, I’m wired to explore and refine.
-      </p>
-    </div>
-  </div>
-
-
-
-  {/* Bottom Right – Sky Gradient → Transparent */}
-  <div className="relative p-6 min-h-[280px] flex flex-col justify-end overflow-hidden">
-  {/* Richer glow with more personality */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage:
-        "radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.15), transparent 70%)", // Tailwind's purple-400 equivalent
-      filter: "blur(48px)",
-    }}
-  ></div>
-
-  <div className="relative z-10">
-    <h3 className="text-white text-xl font-semibold mb-2">
-      What my chihuahuas say
-    </h3>
-    <p className="text-zinc-400 text-sm leading-relaxed">
-      “Always chasing goals—unless we <Chihuahua /> loud enough to distract me.”
-    </p>
-  </div>
+  ))}
 </div>
 
 
+<AboutLink />
 
 
-</div>
+
 
 
 
@@ -216,9 +188,9 @@ const About = () => {
         </Tab>
       </Tabs> */}
 
-      <div className="mt-20" id="thingsIlike">
+      {/* <div className="mt-20" id="thingsIlike">
         <ThingsILikeTable />
-      </div>
+      </div> */}
     </div>
   );
 };

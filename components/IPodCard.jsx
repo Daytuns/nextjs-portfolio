@@ -17,7 +17,7 @@ export default function IPodCard({
           href={href}
           target="_blank"
           draggable={false}
-          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl lg:h-[350px] lg:rounded-3xl lg:p-2"
+          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] shadow-2xl lg:h-[350px] lg:rounded-2xl" //p-2
         >
           {/* Top glow line */}
           <div
@@ -44,7 +44,7 @@ export default function IPodCard({
 
             {/* Text content */}
             <div className={`w-full flex-row items-center justify-between px-8 pt-8 ${accentColor} lg:flex`}>
-              <h3 className="max-w-[85%] text-large">{description}</h3>
+              <h3 className="max-w-[85%] text-sm">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -68,9 +68,9 @@ export default function IPodCard({
                 src={imageSrc}
                 width={363}
                 height={828}
-                className={`relative bottom-0.5 lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 object-contain`}
+                className={`relative bottom-0.5 lg:translate-y-7 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 object-contain`}
                 style={{
-                    maxHeight: '100%', maxWidth: '55%', height: 'auto', color: 'transparent'
+                    maxHeight: '100%', maxWidth: '65%', height: 'auto', color: 'transparent'
                 }}
                 loading="lazy"
             />

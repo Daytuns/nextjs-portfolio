@@ -9,6 +9,8 @@ import Skills from './Skills'
 import LastPlayed from './LastPlayed' 
 import SelectedWork from './SelectedWork'
 import InPageNav from './InPageNav'
+import AboutLink from './AboutLink'
+import TechGrid from './TechGrid'
 
 const Home = () => {
   return (
@@ -19,9 +21,14 @@ const Home = () => {
         <div id='intro'><Intro /></div>
         {/* <Projects /> */}
         <div id='work'><SelectedWork /></div>
+        <TechGrid />
         {/* <Skills /> */}
-        <div id='about'><About />
-        <LastPlayed /></div>
+        <div id='about' className='flex justify-between items-end'>
+          {/* <About /> */}
+          <LastPlayed />
+          <AboutLink />
+          {/* <LastPlayed /> */}
+        </div>
         <Footer />
       </div>
     </div>
