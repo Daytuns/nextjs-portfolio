@@ -7,10 +7,12 @@ import About from './About'
 import Footer from './Footer'
 import Skills from './Skills'
 import LastPlayed from './LastPlayed' 
+import LastPlayed2 from './LastPlayed2'
 import SelectedWork from './SelectedWork'
 import InPageNav from './InPageNav'
 import AboutLink from './AboutLink'
 import TechGrid from './TechGrid'
+import T3Card from './T3Card'
 
 const Home = () => {
   return (
@@ -21,11 +23,13 @@ const Home = () => {
         <div id='intro'><Intro /></div>
         {/* <Projects /> */}
         <div id='work'><SelectedWork /></div>
-        <TechGrid />
+        {/* <TechGrid /> */}
         {/* <Skills /> */}
-        <div id='about' className='flex justify-between items-end'>
+        <div id='about' className='flex justify-start items-end gap-4'>
           {/* <About /> */}
-          <LastPlayed />
+          {/* <LastPlayed />  */}
+          {/* <T3Card /> */}
+          <LastPlayed2 />
           <AboutLink />
           {/* <LastPlayed /> */}
         </div>

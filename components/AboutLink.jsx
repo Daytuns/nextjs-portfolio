@@ -8,7 +8,7 @@ const AboutLink = () => {
       <Link
         href="/about"
         target="_blank"
-        className="group w-[12rem] relative overflow-hidden shadow-2xl lg:h-[284px] lg:rounded-2xl lg:p-2 rounded-2xl h-[300px] transition-all"
+        className="group w-[11rem] relative overflow-hidden shadow-2xl lg:h-[284px] lg:rounded-2xl lg:p-2 rounded-2xl h-[300px] transition-all"
         draggable={false}
         >
         {/* Background Image */}
@@ -37,7 +37,7 @@ const AboutLink = () => {
         <div className="relative z-20 flex flex-col items-center h-full justify-start pt-3 px-4 text-center">
             <h3 className="text-white font-semibold mb-1">About Me</h3>
             <p className="text-white/70 text-sm">Built with curiosity. Shaped by code.</p>
-            <button className="mt-3 rounded-xl bg-blue-500 text-white px-4 py-1 text-[10px] font-medium transition-transform duration-300 group-hover:scale-110">
+            <button className="mt-3 cursor-pointer rounded-xl bg-blue-500 text-white px-4 py-1 text-[10px] font-medium transition-transform duration-300 group-hover:scale-110">
                 Learn more
             </button>
         </div>
