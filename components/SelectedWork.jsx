@@ -14,7 +14,7 @@ const SelectedWork = () => {
           <h2 className='text-xl font-semibold mb-2'>
             Featured Work
           </h2>
-          <h3 className='text-[#777a81] '>Some ideas I've brought to life.</h3>
+          <h3 className='text-[#777a81] '>Some ideas I cared enough to bring to life.</h3>
 
         </div>
 

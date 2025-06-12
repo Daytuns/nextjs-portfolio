@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const AboutLink = () => {
   return (
-    <div className="my-16 flex flex-row">
+    <div className="mb-16 flex flex-row">
       <Link
         href="/about"
         target="_blank"

@@ -25,6 +25,9 @@ const Home = () => {
         <div id='work'><SelectedWork /></div>
         {/* <TechGrid /> */}
         {/* <Skills /> */}
+        <h2 className='text-xl font-semibold mt-5 mb-5'>
+          Links
+        </h2>
         <div id='about' className='flex justify-start items-end gap-4'>
           {/* <About /> */}
           {/* <LastPlayed />  */}
