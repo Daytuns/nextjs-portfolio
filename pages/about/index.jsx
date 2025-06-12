@@ -1,0 +1,134 @@
+import Image from 'next/image'
+import Chihuahua from '@/components/ChihuahuaPopover'
+import { useState } from 'react'
+import Footer from '@/components/Footer'
+
+export default function AboutPage() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText('daytonbaldizon@gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+  return (
+    <div className="max-w-xl mx-auto px-6 pt-20">
+      <div className="mb-12">
+        <h1 className="text-2xl font-semibold mb-2">
+          Hey, I'm{' '}
+          <span className="bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">
+            Dayton
+          </span>
+        </h1>
+        <p className="text-lg leading-relaxed text-[#777a81]">
+          Fullstack developer and electrical engineer. Currently building interfaces & ideas that solve problems I care about.
+        </p>
+      </div>
+
+      <div className="mb-12 space-y-6">
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">what</p>
+          <p className="text-base text-white/80">
+            Today, I’m a developer. I build for the web because it’s fast, expressive, and fun. Whether front‑end or full‑stack, I’m drawn to the creativity and impact of shipping real things to users.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">how</p>
+          <p className="text-base text-white/80">
+            I navigate life and work through curiosity, persistence, and adaptability. I build solutions that are technically sound yet thoughtfully designed.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">why</p>
+          <p className="text-base text-white/80">
+            Understanding and creating gives me purpose—whether a circuit, code, or idea, I’m wired to explore and refine.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">tools</p>
+          <p className="text-base text-white/80">
+            typescript, next.js, tailwind, shadcn, node, prisma, postgresql, figma.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">education</p>
+          <p className="text-base text-white/80">
+            B.S. in Electrical Engineering with a minor in Computer Science from John Brown University. 
+            I took courses such as machine learning, artificial intelligence, embedded systems, and advanced computer programming.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">outside work</p>
+          <p className="text-base text-white/80">
+            Outside of engineering, I find joy in the simple and meaningful things: playing and watching soccer, working out, spending time with my three energetic <Chihuahua />, and having conversations that dive into people’s passions. I’m also deeply drawn to visual art. The idea of communicating ideas, emotions, or stories through visuals fascinates me and influences how I think about technology and design.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">things I like</p>
+          <div className="text-base text-white/80 flex flex-wrap gap-x-1 gap-y-1">
+            <span>Efficiency</span>
+            <span>/</span>
+            <span>Using coffee shops as my office</span>
+            <span>/</span>
+            <span>Good music</span>
+            <span>/</span>
+            <span>Swiss design</span>
+            <span>/</span>
+            <span>Night coding sessions</span>
+            <span>/</span>
+            <span>When the gym is empty</span>
+            <span>/</span>
+            <span>Minimalism and dark mode</span>
+            <span>/</span>
+            <span>Documentation rabbit holes</span>
+          </div>
+        </div>
+
+        <div>
+          <p className="text-sm text-[#999999] font-medium mb-1 uppercase tracking-wide">elsewhere</p>
+          <div className="flex flex-row gap-5 mt-1 text-base">
+            <div onClick={handleCopy} className="group flex items-center gap-1 cursor-pointer">
+              {copied ? (
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 13L9 17L19 7" className="stroke-[#777a81]" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              ) : (
+                <svg
+                  style={{ transform: 'scaleX(-1)' }}
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="group-hover:stroke-white/80"
+                >
+                  <path
+                    d="M9 9V6.2C9 5.08 9 4.52 9.218 4.092C9.41 3.715 9.715 3.41 10.092 3.218C10.52 3 11.08 3 12.2 3H17.8C18.92 3 19.48 3 19.908 3.218C20.284 3.41 20.59 3.715 20.782 4.092C21 4.52 21 5.08 21 6.2V11.8C21 12.92 21 13.48 20.782 13.908C20.59 14.284 20.284 14.59 19.908 14.782C19.48 15 18.921 15 17.803 15H15M9 9H6.2C5.08 9 4.52 9 4.092 9.218C3.715 9.41 3.41 9.715 3.218 10.092C3 10.52 3 11.08 3 12.2V17.8C3 18.92 3 19.48 3.218 19.908C3.41 20.284 3.715 20.59 4.092 20.782C4.519 21 5.079 21 6.197 21H11.804C12.922 21 13.481 21 13.908 20.782C14.284 20.59 14.59 20.284 14.782 19.908C15 19.48 15 18.921 15 17.803V15M9 9H11.8C12.92 9 13.48 9 13.908 9.218C14.284 9.41 14.59 9.715 14.782 10.092C15 10.519 15 11.079 15 12.197V15"
+                    className="stroke-white/80"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              )}
+              <p className="text-white/80">Email</p>
+            </div>
+            <a href="https://www.linkedin.com/in/daytonbaldizon/" target="_blank" className="text-white/80">
+              Linkedin
+            </a>
+            <a href="https://github.com/Daytuns" target="_blank" className="text-white/80">
+              Github
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  )
+}

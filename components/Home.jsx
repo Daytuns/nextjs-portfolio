@@ -31,7 +31,7 @@ const Home = () => {
         <div id='about' className='flex justify-start items-end gap-4'>
           {/* <About /> */}
           {/* <LastPlayed />  */}
-          {/* <T3Card /> */}
+          {/* <T3Card />  */}
           <LastPlayed2 />
           <AboutLink />
           {/* <LastPlayed /> */}

@@ -15,7 +15,7 @@ const Intro = () => {
 
   return (
     <div className=''>
-      <div className="font-semibold text-2xl mt-30">
+      <div className="font-semibold text-2xl mt-38">
           <p><NamePopover />, <br />
           fullstack{' '}
           <span className="bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">
@@ -24,7 +24,7 @@ const Intro = () => {
           and electrical engineer
         </p>
       </div>
-      <div className="flex flex-row gap-5 mt-5 text-large">
+      <div className="flex flex-row gap-5 mt-5 text-lg">
         <div onClick={CopyEmail} className="group flex flex-row gap-1 items-center cursor-pointer">
           {copied ? (
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
