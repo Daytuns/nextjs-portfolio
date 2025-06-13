@@ -127,7 +127,7 @@ const SelectedWork = () => {
           <div className="w-[24rem] mt-2">
             <ProjectCard
               title="VibeHex"
-              href="https://daytuns.github.io/vibehex-frontend-live/"
+              href="/vibehex"
               imageSrc="/HeroVibeHex.png"
               description="AI powered color palette generator given any prompt."
               gradient="linear-gradient(188.62deg, rgb(8, 57, 38) 49.9%, rgb(5, 150, 105) 81.7%, rgb(52, 211, 153) 93.88%, rgb(249, 215, 147) 113.5%)"

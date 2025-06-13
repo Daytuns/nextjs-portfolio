@@ -5,7 +5,7 @@ export default function Chihuahua() {
   return (
     <Popover placement="top" showArrow={true}>
       <PopoverTrigger>
-        <Button className='underline rounded-xl px-0'>chihuahuas</Button>
+        <Button className='underline rounded-xl p-0'>chihuahuas</Button>
       </PopoverTrigger>
       <PopoverContent>
         <div className="px-1">
