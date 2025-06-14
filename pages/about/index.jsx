@@ -16,17 +16,18 @@ export default function AboutPage() {
 
   return (
     <div className="max-w-xl mx-auto pt-20 px-2">
-      <div className='flex gap-6 flex-col'>
-        <div className="relative size-22 aspect-square rounded-full overflow-hidden">
+      <div className='flex gap-4 mb-15 items-center'>
+        <div className="relative aspect-square rounded-full overflow-hidden">
           <Image
-            src="/profile2.jpg"
+            src="/PortfolioPhoto2.jpg"
             alt="Profile picture"
-            fill
-            className="object-cover"
+            width={100}
+            height={100}
+            className="rounded-full object-cover flex-shrink-0"
           />
         </div>
-        <div className="mb-12">
-          <h1 className="text-2xl font-semibold mb-2">
+        <div className='flex flex-col gap-1'>
+          <h1 className="text-xl font-semibold">
             Hey, I'm{' '}
             <Link
             href="/"
@@ -38,11 +39,15 @@ export default function AboutPage() {
             </span>
             </Link>
           </h1>
-          <p className="text-base leading-relaxed text-gray-500">
-            Fullstack developer and electrical engineer. Currently building interfaces, AI agents, & ideas that solve problems I care about.
+          <p className="text-sm leading-relaxed text-gray-500">
+            Fullstack developer and electrical engineer. Currently building interfaces, AI agents & ideas that solve problems I care about.
           </p>
         </div>
       </div>
+
+      {/* <p className="text-base leading-relaxed text-gray-500">
+        Fullstack developer and electrical engineer. Currently building interfaces, AI agents, & ideas that solve problems I care about.
+      </p> */}
 
       <div className="mb-15 space-y-15">
         <div>
@@ -134,13 +139,16 @@ export default function AboutPage() {
                   />
                 </svg>
               )}
-              <p className="text-white/80">Email</p>
+              <p className="text-gray-400">Email</p>
             </div>
             <a href="https://www.linkedin.com/in/daytonbaldizon/" target="_blank" className="text-gray-400">
               Linkedin
             </a>
             <a href="https://github.com/Daytuns" target="_blank" className="text-gray-400">
               Github
+            </a>
+            <a href="https://www.instagram.com/daytunss/" target="_blank" className="text-gray-400">
+              Instagram
             </a>
           </div>
         </div>

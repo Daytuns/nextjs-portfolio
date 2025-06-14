@@ -70,9 +70,10 @@ export default function IPodCard({
                 height={828}
                 className={`relative bottom-0.5 lg:translate-y-7 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 object-contain`}
                 style={{
-                    maxHeight: '100%', maxWidth: '65%', height: 'auto', color: 'transparent'
+                    maxHeight: '100%', maxWidth: '65%', height: 'auto', color: 'transparent', imageRendering: 'crisp-edges'
                 }}
                 loading="lazy"
+                quality={95}
             />
 
           </div>

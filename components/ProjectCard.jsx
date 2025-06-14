@@ -71,6 +71,7 @@ export default function ProjectCard({
               loading="lazy"
               className={`relative bottom-0.5 w-full max-w-[90%] lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3`}
               style={{ color: 'transparent' }}
+              unoptimized
             />
           </div>
         </Link>
