@@ -11,15 +11,14 @@ import T3StackCard from './T3StackCard'
 const Home = () => {
   return (
     <div className='flex'>
-      {/* <InPageNav/> */}
-      <div className="w-full max-w-xl mx-auto">
+      <div className="w-full max-w-xl mx-auto px-6 sm:px-0">
         <Nav />
         <div id='intro'><Intro /></div>
         <div id='work'><SelectedWork /></div>
         <h2 className='text-xl font-semibold mt-5 mb-5'>
           Links
         </h2>
-        <div id='about' className='flex justify-start items-end gap-4'>
+        <div id='about' className='flex flex-nowrap justify-start items-end gap-4 overflow-x-auto'>
           <T3StackCard />
           <AboutLink />
           <LastPlayed2 />

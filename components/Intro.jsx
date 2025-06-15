@@ -15,7 +15,7 @@ const Intro = () => {
 
   return (
     <div className=''>
-      <div className="font-semibold text-2xl mt-38">
+      <div className="font-semibold text-2xl sm:mt-38 mt-30">
           <p><NamePopover />, <br />
           fullstack{' '}
           <span className="bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">

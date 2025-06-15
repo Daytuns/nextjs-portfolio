@@ -61,7 +61,7 @@ const LastPlayed2 = () => {
       href={track.track.external_urls.spotify}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative group rounded-2xl overflow-hidden w-[170px] h-[200px] hover:scale-[1.02] transition-all duration-300 mb-18"
+      className="relative group rounded-2xl overflow-hidden w-[170px] h-[200px] hover:scale-[1.02] transition-all duration-300 mb-18 flex-shrink-0"
     >
       {/* Blurred background */}
       <Image

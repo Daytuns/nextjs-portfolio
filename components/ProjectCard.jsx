@@ -43,8 +43,8 @@ export default function ProjectCard({
             />
 
             {/* Text content */}
-            <div className={`w-full flex-row items-center justify-between px-10 pt-8 ${accentColor} lg:flex`}>
-              <h3 className="max-w-[90%]">{description}</h3>
+            <div className={`w-full flex-row items-center justify-between px-10 pt-8 ${accentColor} flex`}>
+              <h3 className="sm:max-w-[90%] max-w-[95%]">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -55,7 +55,7 @@ export default function ProjectCard({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-arrow-right size-4"
+                className="lucide lucide-arrow-right sm:size-4 size-7"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
@@ -69,7 +69,7 @@ export default function ProjectCard({
               width={1203}
               height={900}
               loading="lazy"
-              className={`relative bottom-0.5 w-full max-w-[90%] lg:translate-y-4 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3`}
+              className={`relative bottom-0.5 w-full max-w-[90%] translate-y-4 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} block rotate-0 group-hover:scale-[1.08] group-hover:-rotate-3`}
               style={{ color: 'transparent' }}
               unoptimized
             />

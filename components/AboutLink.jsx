@@ -8,7 +8,7 @@ const AboutLink = () => {
       className="
         group relative h-[200px] w-[160px] rounded-3xl 
         overflow-hidden shadow-2xl border border-white/[0.05]
-        transition-all duration-200 hover:scale-[1.02] mb-18
+        transition-all duration-200 hover:scale-[1.02] mb-18 flex-shrink-0
       "
       style={{
         boxShadow: `

@@ -7,7 +7,7 @@ const SelectedWork = () => {
   return (
     <div className="relative w-full pt-15 pb-5 overflow-hidden">
       {/* Ambient lighting effect */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2/3 h-[45vh] bg-blue-400/10 rounded-b-full blur-3xl pointer-events-none z-0" />
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 sm:w-2/3 h-[45vh] bg-blue-400/10 rounded-b-full blur-3xl pointer-events-none z-0" />
       
       <div className="relative z-10">
         <div className='w-full flex flex-col justify-center'>
@@ -112,8 +112,8 @@ const SelectedWork = () => {
         </div> */}
 
         {/* iPod and VibeHex */}
-        <div className='flex gap-5 w-full'>
-          <div className="flex flex-col lg:flex-row gap-8 w-[16rem] mt-2">
+        <div className='flex gap-5 w-full overflow-x-auto flex-nowrap sm:overflow-x-visible'>
+          <div className="flex flex-col gap-8 w-[15rem] sm:w-[16rem] mt-2 flex-shrink-0 sm:flex-shrink">
             <IPodCard
               title="Reimagining the iPod"
               href="https://your-zenith-minds-link.com"
@@ -124,7 +124,7 @@ const SelectedWork = () => {
               accentColor="text-blue-300"
             />
           </div>
-          <div className="w-[24rem] mt-2">
+          <div className="w-[20rem] sm:w-[24rem] mt-2 flex-shrink-0 sm:flex-shrink">
             <ProjectCard
               title="VibeHex"
               href="/vibehex"

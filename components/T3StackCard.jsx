@@ -11,7 +11,7 @@ const T3StackCard = () => {
         overflow-hidden shadow-2xl border border-white/[0.05]
         transition-all duration-300 ease-out
         hover:scale-[1.02] hover:border-white/10
-        mb-18
+        mb-18 flex-shrink-0
       "
       style={{
         background: `

@@ -17,7 +17,7 @@ export default function IPodCard({
           href={href}
           target="_blank"
           draggable={false}
-          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] shadow-2xl lg:h-[350px] lg:rounded-2xl" //p-2
+          className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] shadow-2xl h-[278px] sm:h-[350px] w-auto mx-auto"
         >
           {/* Top glow line */}
           <div
@@ -29,7 +29,7 @@ export default function IPodCard({
           />
 
           {/* Main content container */}
-          <div className="group relative flex size-full flex-col justify-between items-center overflow-hidden rounded-xl transition-all duration-300 lg:rounded-2xl">
+          <div className="group relative flex flex-col justify-between items-center overflow-hidden transition-all duration-300 h-full w-full rounded-2xl">
             {/* Background gradient */}
             <div className="absolute inset-0 -z-1" style={{ background: gradient }} />
 
@@ -43,8 +43,8 @@ export default function IPodCard({
             />
 
             {/* Text content */}
-            <div className={`w-full flex-row items-center justify-between px-8 pt-8 ${accentColor} lg:flex`}>
-              <h3 className="max-w-[85%] text-sm">{description}</h3>
+            <div className={`w-full flex-row items-center justify-between px-6 pt-6 sm:px-8 sm:pt-8 ${accentColor} flex`}>
+              <h3 className="max-w-[85%] sm:max-w-[90%] text-sm">{description}</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -68,9 +68,9 @@ export default function IPodCard({
                 src={imageSrc}
                 width={363}
                 height={828}
-                className={`relative bottom-0.5 lg:translate-y-7 translate-y-10 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3 object-contain`}
+                className={`relative bottom-0.5 translate-y-4 sm:translate-y-7 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform ${imageShadow} block rotate-0 group-hover:scale-[1.08] group-hover:-rotate-3 object-contain`}
                 style={{
-                    maxHeight: '100%', maxWidth: '65%', height: 'auto', color: 'transparent', imageRendering: 'crisp-edges'
+                    height: '100%', width: 'auto', maxWidth: '100%', color: 'transparent', imageRendering: 'crisp-edges'
                 }}
                 loading="lazy"
                 quality={95}
