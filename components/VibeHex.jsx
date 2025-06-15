@@ -3,9 +3,9 @@ import Footer from './Footer';
 
 const VibeHex = () => {
   return (
-    <div className='max-w-xl mx-auto px-2 pt-20 text-white'>
+    <div className='max-w-xl mx-auto px-6 sm:px-0 pt-20 text-white'>
     <div className="space-y-12">
-      <h1 className="text-xl font-semibold">
+      <h1 className="text-2xl font-semibold">
         AI Powered Color Palette Generator — <span className="bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">VibeHex</span>
       </h1>
 

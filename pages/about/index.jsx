@@ -15,31 +15,31 @@ export default function AboutPage() {
   }
 
   return (
-    <div className="max-w-xl mx-auto pt-20 px-2">
-      <div className='flex gap-4 mb-15 items-center'>
+    <div className="max-w-xl mx-auto pt-20 px-6 sm:px-0">
+      <div className='flex gap-4 mb-15 sm:items-center sm:flex-row items-start flex-col'>
         <div className="relative aspect-square rounded-full overflow-hidden">
           <Image
             src="/PortfolioPhoto2.jpg"
             alt="Profile picture"
             width={100}
             height={100}
-            className="rounded-full object-cover flex-shrink-0"
+            className="rounded-full object-cover flex-shrink-0 w-[50px] h-[50px] sm:w-auto sm:h-auto"
           />
         </div>
         <div className='flex flex-col gap-1'>
-          <h1 className="text-xl font-semibold">
+          <h1 className="text-2xl font-semibold">
             Hey, I'm{' '}
             <Link
             href="/"
             className=""
             draggable={false}
             >
-            <span className="bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">
+            <span className="text-2xl bg-gradient-to-r from-[#FF00D0] to-[#FF7C09] bg-[length:200%] bg-clip-text text-transparent animate-gradient-move">
             Dayton
             </span>
             </Link>
           </h1>
-          <p className="text-sm leading-relaxed text-gray-500">
+          <p className="leading-relaxed text-gray-500">
             Fullstack developer and electrical engineer. Currently building interfaces, AI agents & ideas that solve problems I care about.
           </p>
         </div>
